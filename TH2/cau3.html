@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Form Liên Hệ</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+<h1>Liên hệ</h1>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+    .contact-form {
+        display: flex;
+        max-width: 600px;
+        width: 100%;
+    }
+    .contact-info {
+        background: #f1f1f1;
+        padding: 20px;
+        border-radius: 5px 0 0 5px;
+    }
+    .contact-info h2 {
+        margin-top: 0;
+    }
+    .contact-info p {
+        margin-bottom: 10px;
+    }
+    .contact-form form {
+        background: #fff;
+        padding: 20px;
+        border-radius: 0 5px 5px 0;
+        width: 100%;
+    }
+    input,
+    textarea,
+    button {
+        width: 100%;
+        margin-bottom: 10px;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+    button {
+        background: #007bff;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+    }
+</style>
+</head>
+<body>
+
+<div class="contact-form">
+    <div class="contact-info">
+        <h2>Thông tin</h2>
+        <p><i class="fas fa-map-marker-alt"></i> 6 Phan Luong, 1 Truong Dinh, Hai Bà Trưng, Hà Nội</p>
+        <p><i class="fas fa-phone"></i> +84 24 3852 53602</p>
+        <p><i class="far fa-envelope"></i> example@example.com</p>
+    </div>
+    <form action="/submit_contact_form" method="post">
+        <input type="text" name="name" placeholder="Họ và tên" required><br>
+        <input type="email" name="email" placeholder="Email" required><br>
+        <textarea name="message" rows="4" placeholder="Nội dung tin nhắn" required></textarea><br>
+        <button type="submit">Gửi tin nhắn</button>
+    </form>
+</div>
+
+</body>
+</html>

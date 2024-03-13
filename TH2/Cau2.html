@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ĐÓNG GÓP Ý KIẾN VỀ SẢN PHẨM</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: white ;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .form-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px black ;
+    width: 500px;
+  }
+
+  .form-container label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+  }
+
+  .form-container input,
+  .form-container textarea {
+    width: 100%;
+    padding: 5px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+
+  .form-container button {
+    width: 100%;
+    padding: 10px;
+    background-color: #6c5ce7;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+</style>
+</head>
+<body>
+
+<div class="form-container">
+<center>
+  <h2>ĐÓNG GÓP Ý KIẾN VỀ SẢN PHẨM</h2>
+  <p> Góp ý của bạn sẽ được chúng tôi xem xét, vui lòng viết có dấu</p> 
+<p> Các ý kiến đóng nên viết chi tiết rõ ràng, kèm theo minh chứng xác thực địa điểm nếu có</p>
+</center>
+  <label for="fullName">Họ và tên</label>
+  <input type="text" id="fullName" placeholder="Nhập họ và tên">
+
+  <label for="productCode">Mã thẻ</label>
+  <input type="text" id="productCode" placeholder="Nhập mã thẻ">
+
+  <label for="phone">Số điện thoại liên hệ</label>
+  <input type="tel" id="phone" placeholder="Nhập số điện thoại">
+
+  <label for="email">E-mail</label>
+  <input type="email" id="email" placeholder="Nhập địa chỉ email">
+
+  <label for="feedback">Ý kiến của bạn về sản phẩm</label>
+  <textarea id="feedback" rows="4" placeholder="Nhập ý kiến của bạn"></textarea>
+
+  <button onclick="submitFeedback()">Gửi Ý Kiến</button>
+</div>
+
+<script>
+function submitFeedback() {
+  // Xử lý dữ liệu khi người dùng nhấn nút Gửi Ý Kiến
+  alert('Cảm ơn bạn đã đóng góp ý kiến về sản phẩm!');
+}
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Giải Phương Trình Bậc Nhất</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .calculator {
+    width: 300px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #000;
+  }
+
+  .calculator label {
+    margin-top: 10px;
+    display: block;
+    font-weight: bold;
+  }
+
+  .calculator input {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+  }
+
+  .calculator button {
+    width: 100%;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .result {
+    margin-top: 10px;
+    font-size: 1.2em;
+  }
+
+</style>
+</head>
+<body>
+
+<div class="calculator">
+  <label for="numA">Hệ số a</label>
+  <input type="number" id="numA" placeholder="Nhập a">
+
+  <label for="numB">Hệ số b</label>
+  <input type="number" id="numB" placeholder="Nhập b">
+
+  <button onclick="calculate()">Giải Phương Trình</button>
+
+  <div class="result" id="result"></div>
+</div>
+
+<script>
+function calculate() {
+  var a = document.getElementById('numA').value;
+  var b = document.getElementById('numB').value;
+  var result = '';
+
+  if (a == 0 && b == 0) {
+    result = 'Phương trình có vô số nghiệm';
+  } else if (a == 0 && b != 0) {
+    result = 'Phương trình vô nghiệm';
+  } else {
+    var x = -b / a;
+    result = 'Nghiệm x = ' + x.toFixed(2);
+  }
+  
+  document.getElementById('result').innerText = result;
+}
+</script>
+
+</body>
+</html>
